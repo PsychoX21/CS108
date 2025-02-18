@@ -1,0 +1,573 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>Online AMP HTML Cheat Sheet</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="This online AMP cheat sheet will help you find the code snippets easily and quickly while working on your next project. Even the HTML Cheat Sheet has its own mobile-friendly version.">
+<meta name="keywords" content="amp,html,cheat,sheet">
+<link rel="canonical" href="index.html">
+<meta property="og:title" content="Online AMP HTML Cheat Sheet">
+<meta property="og:description" content="This online AMP cheat sheet will help you find the code snippets easily and quickly while working on your next project. Even the HTML Cheat Sheet has its own mobile-friendly version.">
+<meta property="og:url" content="https://htmlcheatsheet.com/amp/">
+<meta property="og:image" content="https://htmlcheatsheet.com/images/amp-html-cheat-sheet-online.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="../favicon.ico">
+<link rel="stylesheet" href="../codemirror/doc/docs.css">
+<link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+<script src="../assets/jscolor.min.js"></script>
+<script src="../tinymce/tinymce.gzip.js"></script>
+<script src="../assets/jquery.js"></script>
+<script src="../codemirror/lib/codemirror.js"></script>
+<script src="../codemirror/addon/fold/xml-fold.js"></script>
+<script src="../codemirror/addon/edit/matchtags.js"></script>
+<script src="../codemirror/addon/selection/active-line.js"></script>
+<script src="../codemirror/mode/xml/xml.js"></script>
+<script src="../codemirror/mode/css/css.js"></script>
+<script src="../cheatsheet.js"></script>
+<link rel="stylesheet" href="../cheatsheet.css">
+<script async=true>!function(){var o,e=window.location.hostname,t=document.createElement("script"),n=document.getElementsByTagName("script")[0],e="https://cmp.inmobi.com".concat("/choice/","xncav4ssEzwLp","/",e,"/choice.js?tag_version=V3"),p=0;t.async=!0,t.type="text/javascript",t.src=e,n.parentNode.insertBefore(t,n),function(){for(var e,a="__tcfapiLocator",n=[],s=window;s;){try{if(s.frames[a]){e=s;break}}catch(e){}if(s===window.top)break;s=s.parent}e||(!function e(){var t,n=s.document,p=!!s.frames[a];return p||(n.body?((t=n.createElement("iframe")).style.cssText="display:none",t.name=a,n.body.appendChild(t)):setTimeout(e,5)),!p}(),s.__tcfapi=function(){var e,t=arguments;if(!t.length)return n;"setGdprApplies"===t[0]?3<t.length&&2===t[2]&&"boolean"==typeof t[3]&&(e=t[3],"function"==typeof t[2]&&t[2]("set",!0)):"ping"===t[0]?(e={gdprApplies:e,cmpLoaded:!1,cmpStatus:"stub"},"function"==typeof t[2]&&t[2](e)):("init"===t[0]&&"object"==typeof t[3]&&(t[3]=Object.assign(t[3],{tag_version:"V3"})),n.push(t))},s.addEventListener("message",function(n){var p="string"==typeof n.data,e={};try{e=p?JSON.parse(n.data):n.data}catch(e){}var a=e.__tcfapiCall;a&&window.__tcfapi(a.command,a.version,function(e,t){t={__tcfapiReturn:{returnValue:e,success:t,callId:a.callId}};p&&(t=JSON.stringify(t)),n&&n.source&&n.source.postMessage&&n.source.postMessage(t,"*")},a.parameter)},!1))}(),o=["2:tcfeuv2","6:uspv1","7:usnatv1","8:usca","9:usvav1","10:uscov1","11:usutv1","12:usctv1"],window.__gpp_addFrame=function(e){var t;window.frames[e]||(document.body?((t=document.createElement("iframe")).style.cssText="display:none",t.name=e,document.body.appendChild(t)):window.setTimeout(window.__gpp_addFrame,10,e))},window.__gpp_stub=function(){var e=arguments;if(__gpp.queue=__gpp.queue||[],__gpp.events=__gpp.events||[],!e.length||1==e.length&&"queue"==e[0])return __gpp.queue;if(1==e.length&&"events"==e[0])return __gpp.events;var t=e[0],n=1<e.length?e[1]:null,p=2<e.length?e[2]:null;if("ping"===t)n({gppVersion:"1.1",cmpStatus:"stub",cmpDisplayStatus:"hidden",signalStatus:"not ready",supportedAPIs:o,cmpId:10,sectionList:[],applicableSections:[-1],gppString:"",parsedSections:{}},!0);else if("addEventListener"===t){"lastId"in __gpp||(__gpp.lastId=0),__gpp.lastId++;var a=__gpp.lastId;__gpp.events.push({id:a,callback:n,parameter:p}),n({eventName:"listenerRegistered",listenerId:a,data:!0,pingData:{gppVersion:"1.1",cmpStatus:"stub",cmpDisplayStatus:"hidden",signalStatus:"not ready",supportedAPIs:o,cmpId:10,sectionList:[],applicableSections:[-1],gppString:"",parsedSections:{}}},!0)}else if("removeEventListener"===t){for(var s=!1,i=0;i<__gpp.events.length;i++)if(__gpp.events[i].id==p){__gpp.events.splice(i,1),s=!0;break}n({eventName:"listenerRemoved",listenerId:p,data:s,pingData:{gppVersion:"1.1",cmpStatus:"stub",cmpDisplayStatus:"hidden",signalStatus:"not ready",supportedAPIs:o,cmpId:10,sectionList:[],applicableSections:[-1],gppString:"",parsedSections:{}}},!0)}else"hasSection"===t?n(!1,!0):"getSection"===t||"getField"===t?n(null,!0):__gpp.queue.push([].slice.apply(e))},window.__gpp_msghandler=function(n){var p,a="string"==typeof n.data;try{var t=a?JSON.parse(n.data):n.data}catch(e){t=null}"object"==typeof t&&null!==t&&"__gppCall"in t&&(p=t.__gppCall,window.__gpp(p.command,function(e,t){t={__gppReturn:{returnValue:e,success:t,callId:p.callId}};n.source.postMessage(a?JSON.stringify(t):t,"*")},"parameter"in p?p.parameter:null,"version"in p?p.version:"1.1"))},"__gpp"in window&&"function"==typeof window.__gpp||(window.__gpp=window.__gpp_stub,window.addEventListener("message",window.__gpp_msghandler,!1),window.__gpp_addFrame("__gppLocator"));var a,s=function(){var e=arguments;typeof window.__uspapi!==s&&setTimeout(function(){void 0!==window.__uspapi&&window.__uspapi.apply(window.__uspapi,e)},500)};void 0===window.__uspapi&&(window.__uspapi=s,a=setInterval(function(){p++,window.__uspapi===s&&p<3?console.warn("USP is not accessible"):clearInterval(a)},6e3))}();</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H511WG5CL2"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-H511WG5CL2');</script>
+</head>
+<body class="htmlpage" id="ampPage">
+	<div id="pagewrap">
+		<div id="tabContainer">
+		</div>
+		<a href="../index.html" title="HTML CSS JavaScript Home" class="homeMenu">HTML CSS JS</a>
+		<div class="mainContent">			
+			<div class="header">
+				<div class="navigationtabs"><span class="naviTitle">Cheat Sheets: </span>
+					<nav>
+						<ul>
+<li><a href="../index.html" class="htmlColor" title="HTML Cheat Sheet">HTML</a></li>
+<li><a href="../css/index.html" class="cssColor" title="CSS Cheat Sheet">CSS</a></li>
+<li><a href="../js/index.html" class="jsColor" title="JS Cheat Sheet">JS</a></li>
+<li><a href="../php/index.html" class="phpColor" title="PHP Cheat Sheet">PHP</a></li>
+<li><a href="../jquery/index.html" class="jqColor" title="jQuery Cheat Sheet">&nbsp;&nbsp;&nbsp;jQ</a></li>
+<li><a href="index.html#" class="ampColor" title="AMP HTML Cheat Sheet"><span>⚡</span>&nbsp;AMP</a></li>
+<li><a href="../seo/index.html" class="seoColor" title="SEO Cheat Sheet"><strong>S</strong><strong>E</strong><strong>O</strong></a></li>
+						</ul>
+					</nav>
+				</div>
+				<h1><a href="../index.html"><img src="../images/logo-amp.png" height="50" width="50" alt="AMP HTML Cheat Sheet"> AMP HTML Cheat Sheet</a></h1>
+			</div>
+		
+			<div id="minimizedPanels">
+			</div>
+			
+			<div class="masonryPanels">
+				<div class="masonryPanelWrap noPencil" id="firstGridItem">
+				</div>
+
+				<div class="masonryPanelWrap noPencil">
+					<div class="masonryPanel">
+						<h2>Hello World <span>👶</span></h2>
+						<div class="panelHelper">Minimalist template.</div>
+						<div class="panelInner">
+<pre><span style='color:#004a43; '>&lt;!doctype html></span>
+<span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>html</span><span style='color:#274796; '> amp </span><span style='color:#074726; '>lang</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"en"</span><span style='color:#a65700; '>></span>
+<span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>head</span><span style='color:#a65700; '>></span>
+<span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>meta</span><span style='color:#274796; '> </span><span style='color:#074726; '>charset</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"utf-8"</span><span style='color:#a65700; '>></span>
+<span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>script</span><span style='color:#274796; '> async </span><span style='color:#074726; '>src</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"https://cdn.ampproject.org/v0.js"</span><span style='color:#a65700; '>></span><span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>script</span><span style='color:#a65700; '>></span>
+<span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>title</span><span style='color:#a65700; '>></span>Hello World!<span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>title</span><span style='color:#a65700; '>></span>
+<span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>link</span><span style='color:#274796; '> </span><span style='color:#074726; '>rel</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"canonical"</span><span style='color:#274796; '> </span><span style='color:#074726; '>href</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"https://htmlcheatsheet.com"</span><span style='color:#a65700; '>></span>
+<span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>meta</span><span style='color:#274796; '> </span><span style='color:#074726; '>name</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"viewport"</span><span style='color:#274796; '> </span><span style='color:#074726; '>content</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"width=device-width,minimum-scale=1,initial-scale=1"</span><span style='color:#a65700; '>></span>
+<span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>script</span><span style='color:#274796; '> </span><span style='color:#074726; '>type</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"application/ld+json"</span><span style='color:#a65700; '>></span>
+<span style='color:#800080; '>{</span>
+  <span style='color:#800000; '>"</span><span style='color:#0000e6; '>@context</span><span style='color:#800000; '>"</span><span style='color:#800080; '>:</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>http://schema.org</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span>
+  <span style='color:#800000; '>"</span><span style='color:#0000e6; '>@type</span><span style='color:#800000; '>"</span><span style='color:#800080; '>:</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>NewsArticle</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span>
+  <span style='color:#800000; '>"</span><span style='color:#0000e6; '>headline</span><span style='color:#800000; '>"</span><span style='color:#800080; '>:</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>Hello World</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span>
+  <span style='color:#800000; '>"</span><span style='color:#0000e6; '>datePublished</span><span style='color:#800000; '>"</span><span style='color:#800080; '>:</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>2018-08-08T12:02:41Z</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span>
+  <span style='color:#800000; '>"</span><span style='color:#0000e6; '>image</span><span style='color:#800000; '>"</span><span style='color:#800080; '>:</span> <span style='color:#808030; '>[</span>
+	<span style='color:#800000; '>"</span><span style='color:#0000e6; '>logo.jpg</span><span style='color:#800000; '>"</span>
+  <span style='color:#808030; '>]</span>
+<span style='color:#800080; '>}</span>
+<span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>script</span><span style='color:#a65700; '>></span>
+<span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>style</span><span style='color:#a65700; '> amp-boilerplate></span><span style='color:#800000; font-weight:bold; '>body</span><span style='color:#800080; '>{</span><span style='color:#008484; '>-webkit-animation</span><span style='color:#808030; '>:</span>-amp-start <span style='color:#008c00; '>8</span><span style='color:#006600; '>s</span> <span style='color:#400000; '>steps</span><span style='color:#808030; '>(</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span><span style='color:#008484; '>end</span><span style='color:#808030; '>)</span> <span style='color:#008c00; '>0</span><span style='color:#006600; '>s</span> <span style='color:#008c00; '>1</span> <span style='color:#074726; '>normal</span> <span style='color:#074726; '>both</span><span style='color:#800080; '>;</span><span style='color:#008484; '>-moz-animation</span><span style='color:#808030; '>:</span>-amp-start <span style='color:#008c00; '>8</span><span style='color:#006600; '>s</span> <span style='color:#400000; '>steps</span><span style='color:#808030; '>(</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span><span style='color:#008484; '>end</span><span style='color:#808030; '>)</span> <span style='color:#008c00; '>0</span><span style='color:#006600; '>s</span> <span style='color:#008c00; '>1</span> <span style='color:#074726; '>normal</span> <span style='color:#074726; '>both</span><span style='color:#800080; '>;</span>-ms-animation<span style='color:#808030; '>:</span>-amp-start <span style='color:#008c00; '>8</span><span style='color:#006600; '>s</span> <span style='color:#400000; '>steps</span><span style='color:#808030; '>(</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span><span style='color:#008484; '>end</span><span style='color:#808030; '>)</span> <span style='color:#008c00; '>0</span><span style='color:#006600; '>s</span> <span style='color:#008c00; '>1</span> <span style='color:#074726; '>normal</span> <span style='color:#074726; '>both</span><span style='color:#800080; '>;</span><span style='color:#bb7977; font-weight:bold; '>animation</span><span style='color:#808030; '>:</span>-amp-start <span style='color:#008c00; '>8</span><span style='color:#006600; '>s</span> <span style='color:#400000; '>steps</span><span style='color:#808030; '>(</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span><span style='color:#008484; '>end</span><span style='color:#808030; '>)</span> <span style='color:#008c00; '>0</span><span style='color:#006600; '>s</span> <span style='color:#008c00; '>1</span> <span style='color:#074726; '>normal</span> <span style='color:#074726; '>both</span><span style='color:#800080; '>}</span><span style='color:#800080; '>@</span><span style='color:#004a43; '>-webkit-keyframes</span> <span style='color:#0000e6; '>-amp-start</span><span style='color:#800080; '>{</span><span style='color:#006600; '>from</span><span style='color:#800080; '>{</span><span style='color:#bb7977; font-weight:bold; '>visibility</span><span style='color:#808030; '>:</span><span style='color:#074726; '>hidden</span><span style='color:#800080; '>}</span><span style='color:#006600; '>to</span><span style='color:#800080; '>{</span><span style='color:#bb7977; font-weight:bold; '>visibility</span><span style='color:#808030; '>:</span><span style='color:#074726; '>visible</span><span style='color:#800080; '>}</span><span style='color:#800080; '>}</span><span style='color:#800080; '>@</span><span style='color:#004a43; '>-moz-keyframes</span> <span style='color:#0000e6; '>-amp-start</span><span style='color:#800080; '>{</span><span style='color:#006600; '>from</span><span style='color:#800080; '>{</span><span style='color:#bb7977; font-weight:bold; '>visibility</span><span style='color:#808030; '>:</span><span style='color:#074726; '>hidden</span><span style='color:#800080; '>}</span><span style='color:#006600; '>to</span><span style='color:#800080; '>{</span><span style='color:#bb7977; font-weight:bold; '>visibility</span><span style='color:#808030; '>:</span><span style='color:#074726; '>visible</span><span style='color:#800080; '>}</span><span style='color:#800080; '>}</span><span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>@</span>-ms-keyframes -amp-start<span style='color:#800080; '>{</span>from{<span style='color:#bb7977; font-weight:bold; '>visibility</span><span style='color:#808030; '>:</span><span style='color:#074726; '>hidden</span><span style='color:#800080; '>}</span>to<span style='color:#800080; '>{</span><span style='color:#bb7977; font-weight:bold; '>visibility</span><span style='color:#808030; '>:</span><span style='color:#074726; '>visible</span><span style='color:#800080; '>}</span><span style='color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; '>}</span><span style='color:#800080; '>@</span><span style='color:#004a43; '>-o-keyframes</span> <span style='color:#0000e6; '>-amp-start</span><span style='color:#800080; '>{</span><span style='color:#006600; '>from</span><span style='color:#800080; '>{</span><span style='color:#bb7977; font-weight:bold; '>visibility</span><span style='color:#808030; '>:</span><span style='color:#074726; '>hidden</span><span style='color:#800080; '>}</span><span style='color:#006600; '>to</span><span style='color:#800080; '>{</span><span style='color:#bb7977; font-weight:bold; '>visibility</span><span style='color:#808030; '>:</span><span style='color:#074726; '>visible</span><span style='color:#800080; '>}</span><span style='color:#800080; '>}</span><span style='color:#800080; '>@</span><span style='color:#004a43; '>keyframes</span> <span style='color:#0000e6; '>-amp-start</span><span style='color:#800080; '>{</span><span style='color:#006600; '>from</span><span style='color:#800080; '>{</span><span style='color:#bb7977; font-weight:bold; '>visibility</span><span style='color:#808030; '>:</span><span style='color:#074726; '>hidden</span><span style='color:#800080; '>}</span><span style='color:#006600; '>to</span><span style='color:#800080; '>{</span><span style='color:#bb7977; font-weight:bold; '>visibility</span><span style='color:#808030; '>:</span><span style='color:#074726; '>visible</span><span style='color:#800080; '>}</span><span style='color:#800080; '>}</span><span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>style</span><span style='color:#a65700; '>></span><span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>noscript</span><span style='color:#a65700; '>></span><span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>style</span><span style='color:#a65700; '> amp-boilerplate></span><span style='color:#800000; font-weight:bold; '>body</span><span style='color:#800080; '>{</span><span style='color:#008484; '>-webkit-animation</span><span style='color:#808030; '>:</span><span style='color:#074726; '>none</span><span style='color:#800080; '>;</span><span style='color:#008484; '>-moz-animation</span><span style='color:#808030; '>:</span><span style='color:#074726; '>none</span><span style='color:#800080; '>;</span>-ms-animation<span style='color:#808030; '>:</span><span style='color:#074726; '>none</span><span style='color:#800080; '>;</span><span style='color:#bb7977; font-weight:bold; '>animation</span><span style='color:#808030; '>:</span><span style='color:#074726; '>none</span><span style='color:#800080; '>}</span><span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>style</span><span style='color:#a65700; '>></span><span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>noscript</span><span style='color:#a65700; '>></span>
+<span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>style</span><span style='color:#a65700; '> amp-custom></span>
+  <span style='color:#800000; font-weight:bold; '>p</span> <span style='color:#800080; '>{</span>
+	<span style='color:#bb7977; font-weight:bold; '>margin</span><span style='color:#808030; '>:</span> <span style='color:#008c00; '>1</span><span style='color:#006600; '>em</span><span style='color:#800080; '>;</span>
+  <span style='color:#800080; '>}</span>
+<span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>style</span><span style='color:#a65700; '>></span>
+<span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>head</span><span style='color:#a65700; '>></span>
+<span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>body</span><span style='color:#a65700; '>></span>
+<span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>h1</span><span style='color:#a65700; '>></span>Hello World<span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>h1</span><span style='color:#a65700; '>></span>
+<span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>body</span><span style='color:#a65700; '>></span>
+<span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>html</span><span style='color:#a65700; '>></span>
+</pre>
+							<a class="buttonka" href="https://html5-templates.com/preview/amp.html" target="_blank">Simple AMP Template</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="masonryPanelWrap noPencil">
+					<div class="masonryPanel">
+						<h2>Important <span>‼</span></h2>
+						<div class="panelHelper">Helperke </div>
+						<div class="panelInner">
+<h4>Define AMP page location on Desktop site</h4>
+<code>
+&lt;link rel="amphtml" href="https://htmlcheatsheet.com/m/"&gt;
+</code>
+<h4>Link back to Desktop from AMP</h4>
+<code>
+&lt;link rel="canonical" href="https://htmlcheatsheet.com/"&gt;
+</code>
+<h4>Image tag</h4>
+<code>
+&lt;amp-img src="/m/cheatsheet.jpg" alt="Cheat Sheet" layout="responsive" height="200" width="300"&gt;&lt;/amp-img&gt;
+</code>
+<h4>Keep in mind!</h4>
+<ul>
+<li>Don't use <strong>!important</strong> CSS</li>
+<li><strong>https://</strong> highly recommended</li>
+<li>No custom .JS files</li>
+<li>Only 50Kb inline style allowed in <em>&lt;style amp-custom&gt;&nbsp;&lt;/style&gt;</em></li>
+</ul>
+<h4>Common attributes</h4>
+<p>
+fallback, heights, layout, media, noloading, on, placeholder, sizes, width and height
+</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="masonryPanelWrap noPencil">
+					<div class="masonryPanel">
+						<h2>Ads</h2>
+						<div class="panelHelper">We show ads to support this free website. </div>
+						<div class="panelInner">
+							<div class="reklamocska">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9728962508602593"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-9728962508602593"
+     data-ad-slot="9280242075"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+							</div>								
+						</div>
+					</div>
+				</div>
+
+				<div class="masonryPanelWrap noPencil">
+					<div class="masonryPanel">
+						<h2>Useful Links <span>🔗</span></h2>
+						<div class="panelHelper">A list of free useful resources. </div>
+						<div class="panelInner">
+							<div class="buttonkaLista">
+<a href="https://html-online.com/articles/accelerated-mobile-pages-amp/" target="_blank" rel="nofollow">Quick overview</a>
+<a href="https://validator.ampproject.org/" target="_blank" rel="nofollow">Validator</a>
+<a href="https://search.google.com/structured-data/testing-tool/" target="_blank" rel="nofollow">Structured data testing tool</a>
+<a href="https://amp.dev/" target="_blank" rel="nofollow">Project Home Page</a>
+<a href="https://html5-templates.com/preview/amp.html" target="_blank" rel="nofollow">Simple template</a>
+<a href="https://wordpress.org/plugins/accelerated-mobile-pages/" target="_blank" rel="nofollow">AMP for WordPress plugin</a>
+<a href="https://amp.dev/documentation/examples/" target="_blank" rel="nofollow">Examples</a>
+<a href="https://amp.dev/documentation/templates/" target="_blank" rel="nofollow">Templates</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="masonryPanelWrap noPencil">
+					<div class="masonryPanel">
+						<h2>Images <span>🖼</span></h2>
+						<div class="panelHelper">Helperke </div>
+						<div class="panelInner">
+							<h4>Basic syntax</h4>
+							<code>
+								&lt;amp-img src="/m/cheatsheet.jpg" alt="Cheat Sheet" height="200" width="300"&gt;&lt;/amp-img&gt;
+							</code>
+							<h4>Responsiveness</h4>
+							<code>
+								&lt;amp-img<br>&nbsp; &nbsp;src="/narrow.jpg"<br>&nbsp; &nbsp;srcset="/wide.jpg 640w,<br>&nbsp; &nbsp; &nbsp; /narrow.jpg 320w"<br>&nbsp; &nbsp;width="1200"<br>&nbsp; &nbsp;height="800"<br>&nbsp; &nbsp;layout="responsive"<br>&nbsp; &nbsp;alt="demo image"&gt;<br>&lt;/amp-img&gt;
+							</code>
+							<h4>Layout types</h4>
+							<ul>
+								<li><em>nodisplay</em> &ndash; works like display: none style.</li>
+								<li><em>fixed</em> &ndash; fixed width &amp; height</li>
+								<li><em>responsive</em> &ndash; fills container automatically to aspect ratio</li>
+								<li><em>fixed-height</em> &ndash; keeps the specified height unchanged</li>
+								<li><em>fill</em> &ndash; fills available height &amp; width</li>
+								<li><em>container</em> &ndash; lets its children define its size, like a normal <em>div</em></li>
+								<li><em>flex-item</em> &ndash; works like display:flex style</li>
+								<li><em>intrinsic</em> &ndash; responsive until it reaches its height and width</li>
+							</ul>
+							<h4>CSS media queries</h4>
+							<code>
+								@media screen and (max-width: 720px) {<br>&nbsp; p { font-size: 0.9em; }<br>}
+							</code>
+							<h4>Element media queries:</h4>
+							<code>
+								&lt;amp-img<br>&nbsp; media="(min-width: 720px)"<br>&nbsp; src="demo.jpg"<br>&nbsp; width=300<br>&nbsp; height=200<br>&nbsp; layout="responsive"&gt;<br>&lt;/amp-img&gt;
+							</code>
+							<h4>Placeholder</h4>
+							<p>Shows a placeholder while the element is being loaded:</p>
+							<code>
+								&lt;amp-anim src="animation.gif"<br>&nbsp; &nbsp;layout="responsive"<br>&nbsp; &nbsp;width="300"<br>&nbsp; &nbsp;height="200"&gt;<br>&nbsp; &nbsp;&lt;amp-img placeholder<br>&nbsp; &nbsp; &nbsp; src="demo.jpg"<br>&nbsp; &nbsp; &nbsp; layout="fill"&gt;<br>&nbsp; &nbsp;&lt;/amp-img&gt;<br>&lt;/amp-anim&gt;
+							</code>
+							<h4>Fallback</h4>
+							<p>When an element is not supported:</p>
+							<code>
+								&lt;amp-img alt="Demo"<br>&nbsp; width="300"<br>&nbsp; height="200"<br>&nbsp; layout="responsive"<br>&nbsp; src="videofile.webp"&gt;<br>&nbsp; &lt;amp-img alt="Demo"<br> &nbsp; &nbsp; fallback<br> &nbsp; &nbsp; width="300"<br> &nbsp; &nbsp; height="200"<br> &nbsp; &nbsp; layout="responsive"<br>&nbsp; &nbsp; &nbsp; src="image.jpg"&gt;&lt;/amp-img&gt;<br>&lt;/amp-img&gt;
+							</code>
+							<h4>Hide loading indicator</h4>
+							<code>noloading</code>
+						</div>
+					</div>
+				</div>
+
+				<div class="masonryPanelWrap noPencil">
+					<div class="masonryPanel">
+						<h2>Video <span>📼</span></h2>
+						<div class="panelHelper">Add motion picture to pages. </div>
+						<div class="panelInner">
+							<h4>Include</h4>
+							<code>&lt;script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"&gt;&lt;/script&gt;
+							</code>
+							<h4>Example</h4>
+							<code>&lt;amp-video controls<br>&nbsp; width="600"<br>&nbsp; height="400"<br>&nbsp; layout="responsive"<br>&nbsp; poster="geekprank.png"&gt;<br>&nbsp; &lt;source src="geekprank.webm"<br>&nbsp; &nbsp; type="video/webm" /&gt;<br>&nbsp; &lt;source src="geekprank.mp4"<br>&nbsp; &nbsp; type="video/mp4" /&gt;<br>&nbsp; &lt;div fallback&gt;<br>&nbsp; &nbsp; &lt;p&gt;Video element not supported.&lt;/p&gt;<br>&nbsp; &lt;/div&gt;<br>&lt;/amp-video&gt;
+							</code>
+							<h4>Attributes</h4>
+							<p>src, poster, autoplay, controls, controlsList, loop, crossorigin, disableremoteplayback, noaudio, rotate-to-fullscreen</p>
+							<p>artwork, artist, album, title</p>
+							<h4>Youtube Video</h4>
+							<code>
+							&lt;script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"&gt;&lt;/script&gt;
+							</code>
+							<code>&lt;amp-youtube<br>&nbsp; data-videoid="VeeFwwAz7no"<br>&nbsp; layout="responsive"<br>&nbsp; width="480" height="270"&gt;&lt;/amp-youtube&gt;
+							</code>
+						</div>
+					</div>
+				</div>
+				
+				<div class="masonryPanelWrap noPencil">
+					<div class="masonryPanel">
+						<h2>Actions, events <span>🤹</span></h2>
+						<div class="panelHelper">Install event handlers on elements </div>
+						<div class="panelInner">
+							<h4>Syntax</h4>
+							<code>
+								eventName:targetId[.methodName[(arg1=value, arg2=value)]]
+							</code>
+							<h4>Example</h4>
+							<code>
+								on="submit-success:lightbox1;submit-error:lightbox2"
+							</code>
+							<code>
+								&lt;div id="cookie-consent"&gt;The site is using Cookies!&lt;/div&gt;<br>&lt;button on="tap:cookie-consent.hide"&gt;OK, I understand!&lt;/button&gt;
+							</code>
+							<h4>Events</h4>
+							<ul>
+<li><strong>show, hide </strong> &ndash; shows/hides the target element</li>
+<li><strong>toggleVisibility, toggleClass </strong> </li>
+<li><strong>scrollTo(duration=INTEGER, position=STRING) </strong> &ndash; </li>
+<li><strong>focus </strong> &ndash; make the target element gain focus</li>
+<li><strong>open </strong> &ndash; opens the amp-image-lightbox with the source image being the one that triggered the action</li>
+<li><strong>close </strong> &ndash; closes the lightbox</li>
+<li><strong>change </strong> &ndash; on input &amp; select</li>
+<li><strong>input-debounced </strong> &ndash; 300ms passed since an input value change</li>
+<li><strong>input-throttled </strong> &ndash; change event fired maximum once every 100ms</li>
+<li><strong>tap </strong> &ndash; click or tap</li>
+<li><strong>slideChange</strong> &ndash; amp-carousel[type="slides"]</li>
+<li><strong>toggleAutoplay </strong> &ndash; amp-carousel[type="slides"]</li>
+<li><strong>goToSlide(index=INTEGER) </strong> &ndash; advance the carousel to the index</li>
+<li><strong>lightboxOpen </strong> &ndash; amp-lightbox fully visible</li>
+<li><strong>lightboxClose </strong> &ndash; amp-lightbox fully closed</li>
+<li><strong>sidebarOpen </strong> &ndash; amp-sidebar fully open</li>
+<li><strong>sidebarClose </strong> &ndash; amp-sidebar fully closed</li>
+<li><strong>play, pause, mute, unmute, fullscreen </strong> &ndash; video controls</li>
+<li><strong>firstPlay </strong> &ndash; first user interaction with video</li>
+<li><strong>timeUpdate </strong> &ndash; video playing position changed</li>
+<li><strong>submit </strong> &ndash; form is submitted</li>
+<li><strong>clear </strong> &ndash; clears values in the inputs</li>
+<li><strong>submit-error </strong> &ndash; form submission response is an error</li>
+<li><strong>play, pause </strong> &ndash; controls amp-audio</li>
+<li><strong>refresh </strong> &ndash; refreshes data from the src and re-renders the amp-list</li>
+<li><strong>selectUp(delta=INTEGER), selectDown(delta) </strong> &ndash; moves the amp-selector up/down by a value</li>
+<li><strong>open, close, toggle </strong> &ndash; amp-sidebar controls</li>
+<li><strong>navigateTo(url)</strong> </li>
+<li><strong>goBack </strong> &ndash; go back in history</li>
+<li><strong>print </strong> &ndash; Opens the Print Dialog</li>
+							</ul>
+							<h4>amp-bind</h4>
+							<code>
+								&lt;script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"&gt;&lt;/script&gt;
+							</code>
+							Button changes 'World' to 'John':
+							<code>
+								&lt;p [text]="'Hello ' + str"&gt;Hello World&lt;/p&gt;<br>&lt;button on="tap:AMP.setState({str: 'John'})"&gt;
+							</code>
+
+							<h4>amp-state</h4>
+							Initialize state:
+							<code>
+								&lt;amp-state id="thisState"&gt;<br>&nbsp; &lt;script type="application/json"&gt;<br>&nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; "foo": "bar"<br>&nbsp; &nbsp; }<br>&nbsp; &lt;/script&gt;<br>&lt;/amp-state&gt;
+							</code>
+							<code>
+								thisState.foo == "bar"
+							</code>
+							Update state with AMP.setState()
+							<code>
+								&lt;button on="tap:AMP.setState({foo: 'bar', baz: myAmpState.someVariable})"&gt;&lt;/button&gt;
+							</code>
+							<code>
+								&lt;input type="range" on="change:AMP.setState({myRangeValue: event.value})"&gt;
+							</code>
+							AMP.pushState
+							<code>
+								&lt;button on="tap:AMP.pushState({foo: '123'})"&gt;Set 'foo' to 123&lt;/button&gt;
+							</code>
+						</div>
+					</div>
+				</div>
+
+				<div class="masonryPanelWrap noPencil">
+					<div class="masonryPanel">
+						<h2>Ads</h2>
+						<div class="panelHelper">We show ads to support this free website. </div>
+						<div class="panelInner">
+							<div class="reklamocska">
+<div class="minh600"><iframe id="htmlcheatsheet.com_300x600_right_responsive_2_DFP" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" width="1" height="1"></iframe><script>(function () {var size='300x600|300x250',adunit = 'htmlcheatsheet.com_300x600_right_responsive_2_DFP',childNetworkId = '22366645410',xmlhttp = new XMLHttpRequest();xmlhttp.onreadystatechange = function(){if(xmlhttp.readyState==4 && xmlhttp.status==200){var iframe=document.getElementById(adunit).contentWindow.document;iframe.open();iframe.write(xmlhttp.responseText);iframe.close();}};var child=childNetworkId.trim()?','+childNetworkId.trim():'';xmlhttp.open("GET", 'https://pubads.g.doubleclick.net/gampad/adx?iu=/147246189'+child+'/'+adunit+'&sz='+encodeURI(size)+'&t=Placement_type%3Dserving&'+Date.now(), true);xmlhttp.send();})();</script></div>
+							</div>								
+						</div>
+					</div>
+				</div>
+
+				<div class="masonryPanelWrap noPencil">
+					<div class="masonryPanel">
+						<h2>Google Analytics <span>📈</span></h2>
+						<div class="panelHelper">Helperke </div>
+						<div class="panelInner">
+							<h4>Include</h4>
+							<code>
+								&lt;script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"&gt;&lt;/script&gt;
+							</code>
+							<h4>Replace UA-XXXXXXXX-1 with your code</h4>
+							<code>
+								&lt;amp-analytics&nbsp;type="googleanalytics"&gt;<br>&lt;script&nbsp;type="application/json"&gt;<br>{<br>&nbsp;&nbsp;"vars":&nbsp;{<br>&nbsp; &nbsp; "account":&nbsp;"UA-XXXXXXXX-1"<br>&nbsp;&nbsp;},<br>&nbsp;&nbsp;"triggers":&nbsp;{<br>&nbsp; &nbsp; "trackPageview":&nbsp;{<br>&nbsp; &nbsp; "on":&nbsp;"visible",<br>&nbsp; &nbsp; "request":&nbsp;"pageview"<br>&nbsp; &nbsp; }<br>&nbsp;&nbsp;}<br>}
+							</code>
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="masonryPanelWrap noPencil">
+					<div class="masonryPanel">
+						<h2>AdSense <span>💰</span></h2>
+						<div class="panelHelper">Set up AdSense auto ads </div>
+						<div class="panelInner">
+							<h4>Include</h4>
+							<code>
+								&lt;script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"&gt;&lt;/script&gt;
+							</code>
+							<h4>After the opening body tag, add your ID.</h4>
+							<code>
+								&lt;amp-auto-ads type="adsense" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"&gt;&lt;/amp-auto-ads&gt;
+							</code>
+							
+						</div>
+					</div>
+				</div>
+				
+				<div class="masonryPanelWrap noPencil">
+					<div class="masonryPanel">
+						<h2>Sidebar <span>☰</span></h2>
+						<div class="panelHelper">Hamburger menu </div>
+						<div class="panelInner">
+							<h4>Include</h4>
+							<code>
+								&lt;script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"&gt;&lt;/script&gt;
+							</code>
+							<h4>Custom CSS:</h4>
+							<code>
+								.sidebar {padding: 10px;margin: 0;color: #FFF;font-weight:bold;}<br>#sidebar1{background: #CE5937;}<br>.sidebar &gt; li {list-style: none;margin-bottom:10px;}<br>.sidebar a {text-decoration: none;color: #FFF;}<br>.close-sidebar {font-size: 1.5em;padding: 5px 15px;cursor: pointer;color: #FFFFFF;}<br>.headerbar {background: #CE5937;color: #FFF;line-height: 30px;position: fixed;top: 0;left: 0;right: 0;height: 40px;z-index: 1000;}<br>.headerbar a {text-decoration: none;color: #FFF;}
+							</code>
+							<h4>amp-sidebar</h4>
+							<code>
+								&lt;header class="headerbar"&gt;<br>&nbsp;&nbsp;&nbsp;&lt;div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger"&gt;☰&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&lt;a href="/" class="site-name"&gt;MySite&lt;/a&gt;<br>&lt;/header&gt;<br>&lt;amp-sidebar id="sidebar1" layout="nodisplay" side="left"&gt;<br>&nbsp;&nbsp;&nbsp;&lt;div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar"&gt;✕&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&lt;ul class="sidebar"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="https://html6.com/"&gt;Editor&lt;/a&gt;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="https://html5-templates.com/"&gt;Templates&lt;/a&gt;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="https://htmlcheatsheet.com/"&gt;Cheat Sheet&lt;/a&gt;&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>&lt;/amp-sidebar&gt;
+							</code>
+						</div>
+					</div>
+				</div>
+
+				<div class="masonryPanelWrap noPencil">
+					<div class="masonryPanel">
+						<h2>Facebook like <span>👍</span></h2>
+						<div class="panelHelper">Set up a Facebook like button </div>
+						<div class="panelInner">
+							<h4>Include</h4>
+							<code>
+								&lt;script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"&gt;&lt;/script&gt;
+							</code>
+							<h4>Code</h4>
+							<code>
+								&lt;amp-facebook-like width=90 height=20<br>&nbsp; &nbsp;layout="fixed"<br>&nbsp; &nbsp;data-layout="button_count"<br>&nbsp; &nbsp;data-href="https://www.facebook.com/htmlcoding/"&gt;<br>&lt;/amp-facebook-like&gt;
+							</code>								
+						</div>
+					</div>
+				</div>
+
+				<div class="masonryPanelWrap noPencil">
+					<div class="masonryPanel">
+						<h2>Ads</h2>
+						<div class="panelHelper">We show ads to support this free website. </div>
+						<div class="panelInner">
+							<div class="reklamocska">
+<div class="minh600"><iframe id="htmlcheatsheet.com_300x600_left_responsive_3_DFP" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" width="1" height="1"></iframe><script>(function () {var size='300x600|300x250',adunit = 'htmlcheatsheet.com_300x600_left_responsive_3_DFP',childNetworkId = '22366645410',xmlhttp = new XMLHttpRequest();xmlhttp.onreadystatechange = function(){if(xmlhttp.readyState==4 && xmlhttp.status==200){var iframe=document.getElementById(adunit).contentWindow.document;iframe.open();iframe.write(xmlhttp.responseText);iframe.close();}};var child=childNetworkId.trim()?','+childNetworkId.trim():'';xmlhttp.open("GET", 'https://pubads.g.doubleclick.net/gampad/adx?iu=/147246189'+child+'/'+adunit+'&sz='+encodeURI(size)+'&t=Placement_type%3Dserving&'+Date.now(), true);xmlhttp.send();})();</script></div>
+							</div>								
+						</div>
+					</div>
+				</div>
+
+				<div class="masonryPanelWrap noPencil">
+					<div class="masonryPanel">
+						<h2>Facebook comments<span>💬</span></h2>
+						<div class="panelHelper">Comments widget. </div>
+						<div class="panelInner">
+							<h4>Include</h4>
+							<code>
+								&lt;script async custom-element="amp-facebook-comments" src="https://cdn.ampproject.org/v0/amp-facebook-comments-0.1.js"&gt;&lt;/script&gt;
+							</code>
+							<h4>Code</h4>
+							<code>
+								&lt;amp-facebook-comments width="300"<br>&nbsp;&nbsp;&nbsp;height="350"<br>&nbsp;&nbsp;&nbsp;layout="responsive"<br>&nbsp;&nbsp;&nbsp;data-numposts="5"<br>&nbsp;&nbsp;&nbsp;data-colorscheme="dark"<br>&nbsp;&nbsp;&nbsp;data-locale="es_ES"<br>&nbsp;&nbsp;&nbsp;data-order-by="time"<br>&nbsp;&nbsp;&nbsp;data-href="https://htmlcheatsheet.com/"&gt;<br>&lt;/amp-facebook-comments&gt;
+							</code>
+						</div>
+					</div>
+				</div>
+
+				<div class="masonryPanelWrap noPencil">
+					<div class="masonryPanel">
+						<h2>iFrame<span>🖼</span></h2>
+						<div class="panelHelper">Embed external pages </div>
+						<div class="panelInner">
+							<h4>Include</h4>
+							<code>
+								&lt;script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"&gt;&lt;/script&gt;
+							</code>
+							<h4>Use it for Google Maps or anything else</h4>
+							<code>
+								&lt;amp-iframe width="400"<br>&nbsp;&nbsp;&nbsp;title="Collection of HTML codes"<br>&nbsp;&nbsp;&nbsp;height="300"<br>&nbsp;&nbsp;&nbsp;layout="responsive"<br>&nbsp;&nbsp;&nbsp;sandbox="allow-scripts allow-same-origin allow-popups"<br>&nbsp;&nbsp;&nbsp;allowfullscreen<br>&nbsp;&nbsp;&nbsp;frameborder="0"<br>&nbsp;&nbsp;&nbsp;src="https://htmlcheatsheet.com/"&gt;<br>&nbsp;&nbsp;&nbsp;&lt;amp-img layout="fill"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;src="/placeholder.jpg"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;placeholder&gt;&lt;/amp-img&gt;<br>&lt;/amp-iframe&gt;
+							</code>								
+						</div>
+					</div>
+				</div>
+
+				<div class="masonryPanelWrap noPencil">
+					<div class="masonryPanel">
+						<h2>Social share buttons <span>📡</span></h2>
+						<div class="panelHelper">Helperke </div>
+						<div class="panelInner">
+							<h4>Include</h4>
+							<code>
+								&lt;script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"&gt;&lt;/script&gt;
+							</code>
+							<h4>Code</h4>
+							<code>
+								&lt;amp-social-share type="facebook" width="30" height="30"<br>&nbsp;&nbsp;&nbsp;data-param-text="HTML Cheat Sheet"<br>&nbsp;&nbsp;&nbsp;data-param-url="https://htmlcheatsheet.com"&gt;<br>&lt;/amp-social-share&gt;<br>&lt;amp-social-share type="twitter" width="30" height="30"<br>&nbsp;&nbsp;&nbsp;data-param-text="HTML Cheat Sheet"<br>&nbsp;&nbsp;&nbsp;data-param-url="https://htmlcheatsheet.com"&gt;<br>&lt;/amp-social-share&gt;<br>&lt;amp-social-share type="gplus" width="30" height="30"<br>&nbsp;&nbsp;&nbsp;data-param-text="HTML Cheat Sheet"<br>&nbsp;&nbsp;&nbsp;data-param-url="https://htmlcheatsheet.com"&gt;<br>&lt;/amp-social-share&gt;
+							</code>
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="masonryPanelWrap noPencil">
+					<div class="masonryPanel">
+						<h2>Accordion menu<span>🗺</span></h2>
+						<div class="panelHelper">Click to reveal more details. </div>
+						<div class="panelInner">
+							<h4>Include</h4>
+							<code>
+								&lt;script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"&gt;&lt;/script&gt;
+							</code>
+							<h4>Example</h4>
+							<code>
+								&lt;amp-accordion&gt;<br>&nbsp;&nbsp;&nbsp;&lt;section expanded&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Title 1&lt;/h4&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Add any text.&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&lt;/section&gt;<br>&nbsp;&nbsp;&nbsp;&lt;section&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Title 2&lt;/h4&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;Add any &lt;strong&gt;HTML&lt;/strong&gt; content.&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&lt;/section&gt;<br>&nbsp;&nbsp;&nbsp;&lt;section&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Title 3&lt;/h4&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;figure&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;amp-img src="/demo.jpg"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width="400"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height="200"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layout="responsive"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alt="description"&gt;&lt;/amp-img&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;figcaption&gt;This is an image&lt;/figcaption&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/figure&gt;<br>&nbsp;&nbsp;&nbsp;&lt;/section&gt;<br>&lt;/amp-accordion&gt;
+							</code>
+						</div>
+					</div>
+				</div>
+
+				<div class="masonryPanelWrap noPencil">
+					<div class="masonryPanel">
+						<h2>Carousel<span>🎠</span></h2>
+						<div class="panelHelper">Image sliders. </div>
+						<div class="panelInner">
+							<h4>Include</h4>
+							<code>
+								&lt;script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"&gt;&lt;/script&gt;
+							</code>
+							<h4>Code</h4>
+							<code>
+								&lt;amp-carousel width="300"<br>&nbsp;&nbsp;&nbsp;height="200"<br>&nbsp;&nbsp;&nbsp;layout="responsive"<br>&nbsp;&nbsp;&nbsp;type="slides"&gt;<br>&nbsp;&nbsp;&nbsp;&lt;amp-img src="/img1.jpg"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width="300"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height="200"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layout="responsive"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alt="a demo image"&gt;&lt;/amp-img&gt;<br>&nbsp;&nbsp;&nbsp;&lt;amp-img src="/img2.jpg"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width="300"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height="200"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layout="responsive"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alt="another cool image"&gt;&lt;/amp-img&gt;<br>&nbsp;&nbsp;&nbsp;&lt;amp-img src="/img3.jpg"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width="300"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height="200"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layout="responsive"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alt="and the last one"&gt;&lt;/amp-img&gt;<br>&lt;/amp-carousel&gt;
+							</code>
+							
+						</div>
+					</div>
+				</div>
+			</div>	
+			<a class="editors" id="editorsAnchor"></a>
+			<div id="layover">
+			</div>
+			<div id="wrapPreviews" class="clearfix">
+				<div class="wrapPanelControls"><a class="undockPanel" title="Undock editors">&searr;</a></div>
+				<div class="sourceEditorWrap">
+					<div class="editorHeader"><abbr title="Real-Time Source Code Editor">HTML</abbr></div>
+					<div id="sourceFieldecske"></div>
+					<script>
+						var sourceEditorFricc = CodeMirror(document.getElementById("sourceFieldecske"), {
+							value: "",
+							lineNumbers: true,
+							styleActiveLine: true,
+							mode: "text/html",
+							lineWrapping: true,
+							matchTags: {bothTags: true},
+						  });		
+						sourceEditorFricc.on("change", function() {
+							inputChanged();
+						  });
+					</script>
+				</div>
+				
+				<div class="cssEditorWrap">
+					<div class="editorHeader"><abbr title="Style Sheets">CSS</abbr></div>
+					<div id="cssCodeFieldecske"></div>
+					<script>
+						var cssEditorFricc = CodeMirror(document.getElementById("cssCodeFieldecske"), {
+							value: "",
+							lineNumbers: true,
+							styleActiveLine: true,
+							lineWrapping: true,
+							mode: "text/css",
+							matchTags: {bothTags: true},
+						  });
+					</script>
+					<a id="applyCss" title="Apply CSS style">Apply CSS</a>
+				</div>
+				<div class="visualWrap">
+					<div class="editorHeader">Preview</div>
+					<form method="post">
+						<textarea id="elm1" name="elm1"></textarea>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="article">
+			<article>
+<h3>Online AMP HTML Cheat Sheet</h3>
+<p><strong>This online AMP cheat sheet will help you find the code snippets easily and quickly while working on your next project. Even <a href="../index.html">the HTML Cheat Sheet</a> has its own mobile-friendly version. Check it out <a href="../m/index.html" target="_blank">here</a> and see how fast it loads!</strong></p>
+<p><a href="index.html#"><img src="../images/amp-html-cheat-sheet-online.jpg" alt="amp html cheat sheet"></a></p>
+<p>I have already written a short article reviewing and discussing the benefits of <a href="https://html-online.com/articles/accelerated-mobile-pages-amp/" target="_blank" rel="nofollow">why you should implement this technology</a> in your online projects.</p>
+<p>Make sure you save this link to help your next project.</p>
+			</article>
+		</div>			
+		<div class="footer">
+HTML Cheat Sheet is using cookies to collect anonymous visitor statistics and to show better ads. | <a href="AMP-HTML-Cheat-Sheet.pdf" target="_blank">PDF</a> | <a href="https://html-css-js.com/terms-privacy/" rel="external nofollow" target="_blank">Terms and Conditions, Privacy Policy</a><br>
+&copy; HTMLCheatSheet.com				
+		</div>		
+		<a id="back2Top" title="Back to top" href="index.html#">&#10148;</a>
+	</div> 
+</body>
+</html>

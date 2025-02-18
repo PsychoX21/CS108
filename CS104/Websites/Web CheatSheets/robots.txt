@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /getawayfromhere/
+Sitemap: https://htmlcheatsheet.com/sitemap.xml

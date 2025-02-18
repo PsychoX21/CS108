@@ -1,0 +1,165 @@
+<h1>Makefile cheat sheet</h1>
+<p>Mostly geared towards GNU make</p>
+<p>I've used <code>-&gt;|</code> to indicate a tab character, as it's clearer to read than <code>⇥</code></p>
+<ul>
+<li>
+<p>Set a target, its dependencies and the commands to execute in order
+<code>target: [dependencies]
+-&gt;| &lt;shell command&gt;
+-&gt;| &lt;shell command&gt;
+    ...</code></p>
+</li>
+<li>
+<p>shell commands are not required. To just list dependencies for a target, use only the first line:
+<code>output.o: defs.h</code></p>
+</li>
+<li>
+<p>The first target is the default target</p>
+</li>
+</ul>
+<p>This could be <code>all</code> for example, listed together with its dependencies:
+  <code>all: $(TARGET)</code></p>
+<ul>
+<li>
+<p>Use <code>.PHONY &lt;target&gt;</code> at the start or end of a build step if <target> is not an actual file to be build:
+<code>.PHONY: clean
+clean:
+-&gt;| rm -rf *.o $(TARGET)</code>
+or
+<code>install:
+-&gt;| @echo Installing
+.PHONY: install</code>
+but before is preferred.</p>
+</li>
+<li>
+<p>Comments are preceeded with <code>#</code>, either at the start of the line, or as end-of-line comments</p>
+</li>
+<li>
+<p>Lines can be continued across line-breaks by ending a line with a backslash <code>\</code>. 
+  Just be aware of accidental spaces after the backslash (simply always removing trailing whitespace).</p>
+</li>
+<li>
+<p>Set a variable with <code>VARNAME = value</code>
+  Variable values can contains spaces: no need to escape them or quote them. Practical for a list of filenames or compiler flags</p>
+</li>
+</ul>
+<p>Standard variable names:
+```</p>
+<h1>C/C++ compiler</h1>
+<p>CC = gcc<br />
+CXX = g++</p>
+<h1>Linker</h1>
+<p>LD = ld</p>
+<h1>Libraries to link with (include '-l')</h1>
+<p>LIBS = -lm -lpthread</p>
+<h1>Compiler and linker flags (warning levels, optimisation level,</h1>
+<h1>include debugging symbols, add include search path, add library search path)</h1>
+<p>CFLAGS = -Wall -Wextra -O2 -g -I./src/include
+CXXFLAGS = -Wall -Wextra -O2 -g -I./src/include
+LDFLAGS = -L./src/libs</p>
+<h1>Object files</h1>
+<p>OBJS = obj1.o obj2.o obj3.o</p>
+<h1>Executable name</h1>
+<p>TARGET = fancyname
+```</p>
+<ul>
+<li>Use a variable with <code>$(VARNAME)</code>: dollar sign and enclosed in parentheses.</li>
+</ul>
+<p>Single-letter variables can omit the parentheses. This is mainly done for the automatic variables, see below.</p>
+<ul>
+<li>prepend shell commands with '@' to suppress printing the command itself. Shell output is still visible.
+  (The <code>@</code> character has to be at the beginning of the command, directly after the tab.)</li>
+</ul>
+<p>Useful for specific <code>echo</code> commands, e.g.
+<code>$(TARGET): $(OBJS)
+-&gt;| @echo "Building target"
+-&gt;| $(LD) $(LDFLAGS) $(LIBS) ($OBJS) -o $(TARGET)</code></p>
+<ul>
+<li>
+<p>Parallel builds:
+  <code>make -j</code> to use all available cores
+  <code>make -j2</code> to use two cores</p>
+</li>
+<li>
+<p>Automatic variables</p>
+</li>
+<li>
+<p><code>$@</code>: name of the target</p>
+</li>
+<li>
+<p><code>$&lt;</code>: first dependency
+<code>main.o: main.cpp defs.h
+-&gt;| $(CXX) $(CXXFLAGS) $&lt; -o $@</code></p>
+</li>
+<li>
+<p><code>$^</code>: dependencies (prerequisites), separatead by spaces (duplicates are removed)
+<code>$(TARGET): $(OBJS)
+-&gt;| $(CC) $(LDFLAGS) $^ -o $@</code></p>
+</li>
+<li>
+<p><code>$+</code>: as <code>$^</code>, but with duplicates included</p>
+</li>
+<li>
+<p><code>$?</code>: all prerequisites that are newer than the target (with respect to their timestamp)</p>
+</li>
+</ul>
+<p>Each of the above automatic variables has two variants: appended with a <code>D</code>, or appended with an <code>F</code>. 
+  The former results in the directory name of the relevant variable, the latter in just the filename portion.
+  Surround these with parentheses, since they are longer than 1 character, e.g.: <code>$(&lt;F)</code>.</p>
+<ul>
+<li>functions</li>
+</ul>
+<p>GNU make has a bunch of functions that can be applied to variables. A few are listed here, more in the <a href="https://www.gnu.org/software/make/manual/html_node/File-Name-Functions.html#File-Name-Functions">GNU make manual</a>.</p>
+<ul>
+<li>
+<p><code>$(dir file1.txt dir/file2.txt)</code> results in <code>./ dir/</code>.</p>
+</li>
+<li>
+<p><code>$(notdir file1.txt dir/file2.txt)</code> results in <code>file1.txt file2.txt</code>.</p>
+</li>
+</ul>
+<p>The above two functions can be used instead of the <code>D</code> and <code>F</code> additions in case of automatic variables.</p>
+<ul>
+<li>
+<p><code>$(suffix file1.txt)</code> yields <code>.txt</code>. Includes the last dot, and omits results (empty result) from files without an extension.</p>
+</li>
+<li>
+<p><code>$(wildcard *.txt)</code> results in a space-separated list with all <code>.txt</code> files.</p>
+</li>
+<li>
+<p><code>$%</code> (GNU extension). 
+  This is also an automatic variable, but can be used somewhat differently. It is used in patterns:
+<code>%.o: %.c
+-&gt;| $(CC) -c $(CFLAGS) $&lt; -o $@</code>
+  This will build an object file for each source file, with a matching filename as output.
+  (Note that with most compilers, <code>-o $@</code> is not really necessary in this case, 
+  since the compiler will automatically replace the extension with <code>.o</code>.)</p>
+</li>
+</ul>
+<p><code>%</code> is written between a prefix and postfix, either of which can be empty.</p>
+<p>The actual "stem" for each match is stored in the <code>$*</code> variable.</p>
+<p>If there is no (Unix-style) directory separator '/' in the target name, then only the filename part is matched on; directory names are removed before trying to match.
+  This means that the stem does not contain the directory name, though the final target name and prerequisites do: it's only for the matching.</p>
+<h1>Resources</h1>
+<h2>Blog posts</h2>
+<ul>
+<li><a href="https://matthias-endler.de/2017/makefiles/">Afraid of Makefiles? Don't be!</a></li>
+</ul>
+<h2>Manuals</h2>
+<ul>
+<li>
+<p><a href="https://www.gnu.org/software/make/manual/html_node/index.html">GNU make manual</a></p>
+</li>
+<li>
+<p>Clark Grubb's <a href="http://clarkgrubb.com/makefile-style-guide">style guide</a></p>
+</li>
+</ul>
+<h2>Examples</h2>
+<ul>
+<li>http://osr507doc.sco.com/en/tools/make_example.html</li>
+</ul>
+<h2>StackOverflow questions (and their answers)</h2>
+<ul>
+<li>https://stackoverflow.com/questions/3220277/what-do-the-makefile-symbols-and-mean</li>
+<li>https://unix.stackexchange.com/questions/346322/what-does-symbol-in-makefile-mean</li>
+</ul>
