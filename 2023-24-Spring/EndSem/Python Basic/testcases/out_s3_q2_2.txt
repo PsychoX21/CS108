@@ -1,1 +1,0 @@
-[('daughterinlaw', 'bahu'), ('fire', 'aag'), ('love', 'prem'), ('motherinlaw', 'saas'), ('soninlaw', 'damaad'), ('wife', 'patni')]

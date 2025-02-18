@@ -1,1 +1,0 @@
-['yaar', 'voti', 'soni', 'noon', 'kudi', 'jawai']

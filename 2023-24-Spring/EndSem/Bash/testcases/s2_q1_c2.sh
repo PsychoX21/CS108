@@ -1,1 +1,0 @@
-/usr/bin/env bash car_sales.sh sales_2.csv 1 year 9999
