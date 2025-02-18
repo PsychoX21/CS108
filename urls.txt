@@ -1,1 +1,3 @@
 https://github.com/tldr-pages/tldr
+https://git-lfs.com/
+https://zealdocs.org/download.html
