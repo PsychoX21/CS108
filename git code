@@ -1,0 +1,28 @@
+git checkout 0c3be9
+find . -type f ! -name 'bfs.cpp' -not -path './.*' -delete
+git checkout -b correct_bfs
+git commit -am "Saved bfs.cpp"
+git checkout master
+git checkout ff2039
+find . -type f ! -name 'binary_search.cpp' -not -path './.*' -delete
+git checkout -b correct_binary_search
+git commit -am "Saved binary_search.cpp"
+git checkout master
+git checkout 2a07d1
+find . -type f ! -name 'dfs.cpp' -not -path './.*' -delete
+git checkout -b correct_dfs
+git commit -am "Saved dfs.cpp"
+git checkout master
+git checkout ff2039
+find . -type f ! -name 'matrixmul.cpp' -not -path './.*' -delete
+git checkout -b correct_matrixmul
+git commit -am "Saved matrixmul.cpp"
+git checkout master
+git checkout 3d510c
+find . -type f ! -name 'sieve.cpp' -not -path './.*' -delete
+git checkout -b correct_sieve
+git commit -am "Saved sieve.cpp"
+git checkout master
+
+
+mujhe yaad nahi mene naye hashes likh ke save kiya tha kya vo bhi run karke dekh lena
